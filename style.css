@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 5% 10%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80vw;
+    padding:40px;
+    gap:20px;
+    border-radius: 5px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+
+.img-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:40px;
+    align-items: center;
+    .img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img, canvas {
+            max-width:45vw;
+            max-height:60vh;
+        }
+    }
+    .upload-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        input {
+            display: none;
+        }
+        label {
+            font-size: 20px;
+            background-color: rgb(29, 139, 44);
+            padding:10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    gap:20px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap:10px;
+        li {
+            display: flex;
+            flex-direction: column;
+            input {
+                width:100%;
+            }
+        }
+    }
+}
+
+
+
+.btns {
+    display: flex;
+    gap:10px;
+    justify-content: end;
+}
+.download {
+    background-color: rgb(29, 139, 44);
+    width: fit-content;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    align-self: end;
+}
+.reset {
+    background-color: rgb(29, 139, 44);
+    align-self: end;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media (max-width:670px) {
+    .container {
+        display: flex;
+        flex-direction:column ;
+    }
+
+    .img, canvas {
+        .img, canvas {
+            max-width:80vw;
+        }
+    }
+}
